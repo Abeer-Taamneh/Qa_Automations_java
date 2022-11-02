@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebElement;
 
 public class FaceBook {
 
@@ -17,12 +18,17 @@ public class FaceBook {
 	    driver.get("http://127.0.0.1:5500/index.html");
 	    String myTitle=driver.getTitle();
 	    System.out.println(myTitle);
-	    List <WebElement> myListOfOptions=driver.findElements(By.tagName("option"));
+	    
+	    List <WebElement> myListOfOptions=driver.findElements(By.tagName("option"));//  طريقه رقم 1 لحتى اجيب البيانات
 
 	    for(int i=0;i<myListOfOptions.size();i++) {
 	    	System.out.println(myListOfOptions.get(i).getText());
 	    }
 
+
+	   // String myTitle1=driver.getTitle(); لطباعه اسم العنوان 
+	    
+	    
 	}
 
 }
